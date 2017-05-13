@@ -1,0 +1,23 @@
+@import '../../container.css';
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 450px;
+}
+
+.title__slogan {
+  font-size: 34px;
+  font-weight: 400;
+  color: #484848;
+}
+
+.title__domain {
+  font-weight: 800;
+  color: #cb3837;
+}
+
+

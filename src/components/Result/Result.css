@@ -1,0 +1,27 @@
+.result {
+}
+
+.result__congrats {
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+.result__congrats-name {
+  font-weight: 700;
+  color: #cb3837;
+}
+
+.result__reserved {
+  color: #cb3837;
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+}
+
+.result__description {
+  color: #333;
+  text-align: center;
+  font-size: 14px;
+}

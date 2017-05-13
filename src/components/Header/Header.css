@@ -1,0 +1,63 @@
+@import '../../container.css';
+
+.header {
+  display: flex;
+  flex-direction: row;
+
+  min-height: 65px;
+  padding: 0 15px;
+
+  background: #cb3837;
+
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header__inner {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.header__logo-img {
+  width: 30px;
+}
+
+.header__logo-text {
+  font-size: 14px;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0 8px;
+
+  color: #fff;
+}
+
+.header__links {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+
+.header__link {
+  font-size: 14px;
+
+  padding: 0 8px;
+
+  text-decoration: none;
+
+  color: #fff;
+}
+
+.header__link:hover {
+  text-decoration: underline;
+}
