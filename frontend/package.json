@@ -9,10 +9,9 @@
     "dev": "webpack-dev-server",
     "build": "webpack",
     "test": "karma start",
-    "prod": "webpack --env production"
+    "prod": "NODE_ENV=production webpack -p"
   },
   "devDependencies": {
-    "autoprefixer": "^7.0.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
     "babel-plugin-lodash": "^3.2.11",

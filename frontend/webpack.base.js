@@ -1,6 +1,11 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  entry: [
+    './src/index.js',
+  ],
+
   devtool: 'eval',
 
   module: {
@@ -26,11 +31,20 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: true,
-              localIdentName: '[path][name]__[local]--[hash:base64:5]',
+              localIdentName: '[name]--[hash:base64:5]',
               importLoaders: 1,
             },
           }, {
             loader: 'postcss-loader',
+            options: {
+              config: {
+                ctx: {
+                  cssnext: {},
+                  autoprefixer: {},
+                  cssnano: {},
+                },
+              },
+            },
           }],
         }),
       },
@@ -39,5 +53,11 @@ module.exports = {
 
   plugins: [
     new ExtractTextPlugin('styles.css'),
+    new HtmlWebpackPlugin({
+      title: 'npm check name',
+      filename: './index.html',
+      inject: 'body',
+      hash: true,
+    }),
   ],
 };

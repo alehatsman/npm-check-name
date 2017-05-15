@@ -4,6 +4,7 @@
 }
 
 .search__form {
+  display: flex;
 }
 
 .search__field {

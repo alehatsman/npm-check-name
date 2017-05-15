@@ -32,7 +32,7 @@ const Result = createComponent({
   render() {
     this.el.innerHTML = `
       ${this.state.packageName ? `
-        <div class="${styles.result}">
+        <div class="result">
           ${this.state.isAvailable ?
             `<h2 class="${styles.result__congrats}">
               Yay! <span class="${styles['result__congrats-name']}">${this.state.packageName}</span> name is free
