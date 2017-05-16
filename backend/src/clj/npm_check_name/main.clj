@@ -8,4 +8,4 @@
   (let [[app-port] args]
     (log/info ";; -main - starting app-system")
     (component/start
-     (system/new-system {:http-port (or app-port 9000)}))))
+     (system/new-system {:http-port (or app-port (System/getenv "PORT") 9000)}))))

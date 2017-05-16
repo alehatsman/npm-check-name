@@ -4,8 +4,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   
-  :main npm-check-name.main
-
+  
   :dependencies [[org.clojure/clojure "1.8.0"]
                 
                  ; Logging dependencies
@@ -22,10 +21,15 @@
                  [ring-jetty-component "0.3.1"]
                  [metosin/ring-http-response "0.8.2"]
                  [bk/ring-gzip "0.2.1"]
+                 [http-kit "2.2.0"]
 
                  [com.stuartsierra/component "0.3.2"]]
 
   :source-paths ["src/clj"]
 
   :profiles {:dev {:dependencies [[org.clojure/tools.namespace "0.2.11"]]
-                   :source-paths ["dev"]}})
+                   :source-paths ["dev"]}
+
+             :uberjar {:main npm-check-name.main
+                       :aot :all}})
+

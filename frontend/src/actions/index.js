@@ -1,4 +1,4 @@
-import checkName from '../api/npm-mock';
+import checkName from '../api/npm';
 import core from '../core';
 
 function showLoadAction() {
@@ -26,12 +26,12 @@ function searchAction(query) {
   showLoadAction();
   clearPackageName();
   checkName(query)
-    .then((isAvailable) => {
+    .then((res) => {
       hideLoadAction();
       core.store.changeState(state =>
         Object.assign({}, state, {
           packageName: query,
-          isAvailable,
+          isAvailable: res.result,
         }));
     })
     .catch(() => {

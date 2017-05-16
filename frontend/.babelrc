@@ -7,5 +7,4 @@
       "modules": false 
     }]
   ],
-  "plugins": ["lodash"]
 }
