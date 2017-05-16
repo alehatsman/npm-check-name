@@ -19,7 +19,8 @@ const Header = createComponent({
             </h3>
           </div>
           <div class="${styles.header__links}">
-            <a class="${styles.header__link}" href="#">Github</a>
+            <a class="${styles.header__link}" 
+               href="https://github.com/Atsman/npm-check-name">Github</a>
             <a class="${styles.header__link}" href="#">Twitter</a>
           </div>
         </div>

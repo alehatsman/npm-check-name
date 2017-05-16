@@ -3,6 +3,9 @@
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
+  
+  :main npm-check-name.main
+
   :dependencies [[org.clojure/clojure "1.8.0"]
                 
                  ; Logging dependencies
@@ -18,6 +21,7 @@
                  [ring/ring-json "0.4.0"]
                  [ring-jetty-component "0.3.1"]
                  [metosin/ring-http-response "0.8.2"]
+                 [bk/ring-gzip "0.2.1"]
 
                  [com.stuartsierra/component "0.3.2"]]
 

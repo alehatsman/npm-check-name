@@ -12,7 +12,7 @@ const Footer = createComponent({
         <div class="${styles.footer__inner} ${styles.container}">
           <p class="${styles.footer__text}">
             <span>coded with &#9829; by </span>
-            <a href="#">@Atsman</a> & <a href="#">@ok2ju</a>
+            <a href="https://github.com/Atsman">@Atsman</a> & <a href="https://github.com/ok2ju">@ok2ju</a>
           </p>
         </div>
       </footer>

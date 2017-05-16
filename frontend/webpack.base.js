@@ -40,7 +40,6 @@ module.exports = {
               config: {
                 ctx: {
                   cssnext: {},
-                  autoprefixer: {},
                   cssnano: {},
                 },
               },
