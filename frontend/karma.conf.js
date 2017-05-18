@@ -1,10 +1,11 @@
-const webpackBase = require('./webpack.base');
+const path = require('path');
+const webpack = require('./webpack.test');
 
 const TEST_PATH = './src/**/*.test.js';
 
 module.exports = function karmaConfig(config) {
   config.set({
-    reporters: ['mocha'],
+    reporters: ['mocha', 'coverage-istanbul'],
 
     browsers: ['ChromeCanary'],
 
@@ -15,10 +16,15 @@ module.exports = function karmaConfig(config) {
     ],
 
     preprocessors: {
-      [TEST_PATH]: ['webpack'],
+      [TEST_PATH]: ['webpack', 'sourcemap'],
     },
 
-    webpack: webpackBase,
+    coverageIstanbulReporter: {
+      reports: ['html'],
+      dir: path.join(__dirname, 'reports/coverage', 'outputs'),
+    },
+
+    webpack,
   });
 };
 

@@ -1,18 +1,10 @@
 const path = require('path');
+const merge = require('webpack-merge');
+const base = require('./webpack.base');
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  entry: {
-    index: './src/index.js',
-  },
-
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
-  },
-
+module.exports = merge({}, base, {
   module: {
     rules: [
       {
@@ -52,18 +44,15 @@ module.exports = {
           }],
         }),
       },
+      {
+        test: /src\/.+\.js$/,
+        exclude: /(node_modules|\.spec\.ts$)/,
+        loader: 'istanbul-instrumenter-loader',
+        enforce: 'post',
+        options: {
+          esModules: true,
+        },
+      },
     ],
   },
-
-  plugins: [
-    new ExtractTextPlugin('styles.css'),
-    new HtmlWebpackPlugin({
-      title: 'npm check name',
-      filename: './index.html',
-      inject: 'body',
-      hash: true,
-      minify: {
-      },
-    }),
-  ],
-};
+});

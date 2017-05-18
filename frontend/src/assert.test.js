@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import assert from './assert';
+import assert from '../src/assert';
 
 describe('assert', () => {
   it('should throw if expression false', () => {
