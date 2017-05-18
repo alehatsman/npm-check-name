@@ -23,7 +23,9 @@ const Search = createComponent({
 
   onSubmit(e) {
     e.preventDefault();
-    actions.searchAction(this.state.query);
+    if (this.state.query) {
+      actions.searchAction(this.state.query.toLowerCase());
+    }
   },
 
   render() {
