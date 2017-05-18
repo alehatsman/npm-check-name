@@ -1,5 +1,5 @@
-import checkName from '../api/npm';
-import core from '../core';
+import checkName from './api';
+import core from './core';
 
 function showLoadAction() {
   core.store.changeState(state =>

@@ -1,4 +1,4 @@
-import ajax from '../xhr';
+import ajax from './xhr';
 
 export default function checkNake(name) {
   if (!name) {
