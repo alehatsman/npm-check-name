@@ -1,8 +1,9 @@
 (ns user
   (:require 
    [com.stuartsierra.component :as component]
-   [clojure.tools.namespace.repl :refer (refresh refresh-all)]
-   [npm-check-name.system :refer (new-system)]))
+   [clojure.tools.namespace.repl :refer [refresh refresh-all]]
+   [npm-check-name.main :refer [get-port]]
+   [npm-check-name.system :refer [new-system]]))
 
 (def system nil)
 
@@ -10,7 +11,7 @@
   "Constructs the current development system."
   []
   (alter-var-root #'system
-    (constantly (new-system {:http-port 9000}))))
+    (constantly (new-system {:http-port (get-port)}))))
 
 (defn start
   "Starts the current development system."
