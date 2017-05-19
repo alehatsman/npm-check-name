@@ -1,4 +1,3 @@
-import './index.css';
 import App from './components/App';
 
 (function init() {

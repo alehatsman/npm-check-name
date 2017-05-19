@@ -1,7 +1,6 @@
-import ajax from './xhr';
+import ajax from './lib/ajax';
 
-/*
-export default function checkNake(name) {
+export default function checkName(name) {
   if (!name) {
     throw new Error('name must be provided');
   }
@@ -9,15 +8,4 @@ export default function checkNake(name) {
     method: 'GET',
     url: `/api/check-name/${name}`,
   });
-}
-*/
-
-export default function checkNameUsingProxy(name) {
-  if (!name) {
-    throw new Error('name must be provided');
-  }
-  return ajax({
-    method: 'GET',
-    url: `https://crossorigin.me/https://registry.npmjs.org/${name}`,
-  }).then(res => ({ result: !res._id })); // eslint-disable-line
 }

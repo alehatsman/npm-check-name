@@ -1,4 +1,4 @@
-import Store from './store';
+import Store from './lib/store';
 
 export default {
   store: new Store({

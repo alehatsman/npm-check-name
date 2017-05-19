@@ -22,6 +22,7 @@ module.exports = function karmaConfig(config) {
     coverageIstanbulReporter: {
       reports: ['html'],
       dir: path.join(__dirname, 'reports/coverage', 'outputs'),
+      skipFilesWithNoCoverage: false,
     },
 
     webpack,

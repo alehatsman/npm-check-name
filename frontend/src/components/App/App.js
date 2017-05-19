@@ -2,6 +2,7 @@ import createComponent from 'component';
 import Header from '../Header';
 import Content from '../Content';
 import Footer from '../Footer';
+import './base.css';
 import styles from './App.css';
 
 const App = createComponent({

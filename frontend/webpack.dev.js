@@ -10,6 +10,9 @@ module.exports = merge({}, base, {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
 
   plugins: [
