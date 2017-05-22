@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "webpack-dev-server --env=dev",
     "build": "webpack",
-    "test": "karma start",
+    "test": "NODE_ENV=testing karma start",
     "prod": "NODE_ENV=production webpack -p --env=prod --progress --profile --colors"
   },
   "devDependencies": {

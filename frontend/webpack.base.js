@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -73,6 +74,9 @@ module.exports = {
       hash: true,
       minify: {
       },
+    }),
+    new webpack.DefinePlugin({
+      NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
     }),
   ],
 };

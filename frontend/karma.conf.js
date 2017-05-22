@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('./webpack.test');
 
-const TEST_PATH = './src/**/*.test.js';
+const TEST_PATH = './tests.webpack.js';
 
 module.exports = function karmaConfig(config) {
   config.set({
@@ -20,9 +20,9 @@ module.exports = function karmaConfig(config) {
     },
 
     coverageIstanbulReporter: {
-      reports: ['html'],
+      reports: ['text-summary', 'html'],
       dir: path.join(__dirname, 'reports/coverage', 'outputs'),
-      skipFilesWithNoCoverage: false,
+      skipFilesWithNoCoverage: true,
     },
 
     webpack,
