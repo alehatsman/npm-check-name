@@ -6,6 +6,7 @@
   
   
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/core.async "0.3.442"]
                 
                  ; Logging dependencies
                  [org.clojure/tools.logging "0.3.1"]
@@ -15,10 +16,8 @@
                  ; Http dependencies
                  [compojure "1.5.1"]
                  [ring/ring-core "1.5.0"]
-                 [ring/ring-jetty-adapter "1.5.0"]
                  [ring/ring-defaults "0.2.1"]
                  [ring/ring-json "0.4.0"]
-                 [ring-jetty-component "0.3.1"]
                  [metosin/ring-http-response "0.8.2"]
                  [bk/ring-gzip "0.2.1"]
                  [http-kit "2.2.0"]

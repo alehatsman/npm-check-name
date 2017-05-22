@@ -6,7 +6,8 @@
 (defn resolve-url [name]
   (str NPM_REGISTRY name))
 
-(defn check-package-name [name]
-  (let [{:keys [status error]} @(http/get (resolve-url name))]
-    {:error error
-     :result (= status 404)}))
+(defn check-package-name [name cb]
+  (http/get (resolve-url name) nil 
+            (fn [{:keys [status error]}]
+              (cb {:error error
+                   :result (= status 404)}))))
