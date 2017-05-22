@@ -2,7 +2,7 @@
   (:require 
    [com.stuartsierra.component :as component]
    [clojure.tools.namespace.repl :refer [refresh refresh-all]]
-   [npm-check-name.main :refer [get-port]]
+   [npm-check-name.utils :refer [get-port]]
    [npm-check-name.system :refer [new-system]]))
 
 (def system nil)
