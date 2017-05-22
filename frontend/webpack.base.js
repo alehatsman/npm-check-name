@@ -69,7 +69,8 @@ module.exports = {
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       title: 'npm check name',
-      filename: './index.html',
+      favicon: path.resolve(__dirname, './assets/favicon.png'),
+      filename: 'index.html',
       inject: 'body',
       hash: true,
       minify: {
