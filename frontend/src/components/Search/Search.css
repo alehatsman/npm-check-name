@@ -1,3 +1,5 @@
+@import '../../media.css';
+
 .search {
   padding-top: 10px;
   padding-bottom: 50px;
@@ -13,6 +15,10 @@
 
   width: 100%;
   margin: 0 auto;
+
+  @media screen and (--xxs-viewport) and (--portrait) {
+    flex-direction: column;
+  }
 }
 
 .search__input {
@@ -24,6 +30,10 @@
   border-style: solid;
   border-color: #eee;
   background: #eee;
+
+  @media screen and (--xxs-viewport) and (--portrait) {
+    border-width: 1px 1px 0 1px;
+  }
 }
 
 .search__input:focus {
@@ -38,6 +48,11 @@
   border: 0;
   outline: none;
   background: #333;
+
+  @media screen and (--xxs-viewport) and (--portrait) {
+    padding: 20px;
+    width: 100%;
+  }
 }
 
 .search__btn:hover {

@@ -4,15 +4,9 @@
   height: 100%;
 }
 
-.app__header {
-}
-
 .app__content {
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
-}
-
-.app__footer {
 }

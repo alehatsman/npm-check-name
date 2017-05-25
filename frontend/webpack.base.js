@@ -68,13 +68,12 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
+      template: './src/index.ejs',
       title: 'npm check name',
       favicon: path.resolve(__dirname, './assets/favicon.png'),
       filename: 'index.html',
       inject: 'body',
       hash: true,
-      minify: {
-      },
     }),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),

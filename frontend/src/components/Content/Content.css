@@ -1,4 +1,5 @@
 @import '../../container.css';
+@import '../../media.css';
 
 .content {
   display: flex;
@@ -6,13 +7,17 @@
 }
 
 .title {
-  width: 450px;
+  max-width: 450px;
 }
 
 .title__slogan {
   font-size: 34px;
   font-weight: 400;
   color: #484848;
+
+  @media screen and (--xxs-viewport) and (--portrait) {
+    font-size: 24px;
+  }
 }
 
 .title__domain {

@@ -1,4 +1,5 @@
 @import '../../container.css';
+@import '../../media.css';
 
 .header {
   display: flex;
@@ -39,6 +40,10 @@
   padding: 0 8px;
 
   color: #fff;
+
+  @media screen and (--xxs-viewport) and (--portrait) {
+    display: none;
+  }
 }
 
 .header__links {
